@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+    - name: nginx
+      become: true
+      apt:
+        upgrade: yes
+        update_cache: yes
+       
+    - name: nginx
+      become: true
+      apt:
+        name: nginx
+        state: latest
